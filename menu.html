@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu | Odisha Rasoi</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                🍛 Odisha <span>Rasoi</span>
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html" class="active">Menu</a>
+
+                <a href="about.html">About</a>
+
+                <a href="gallery.html">Gallery</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="menu.html" class="order-btn">
+                    Order Now
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MENU HERO
+    ========================== -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <p>ODISHA RASOI</p>
+
+            <h1>Our Food Menu</h1>
+
+            <span>
+                Authentic flavors from the heart of Odisha
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MENU SECTION
+    ========================== -->
+
+    <section class="menu-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p>TRADITIONAL FAVORITES</p>
+
+                <h2>Explore Our Menu</h2>
+
+                <span>
+                    Freshly prepared with authentic Odia flavors
+                </span>
+
+            </div>
+
+
+            <!-- =========================
+                 CATEGORY FILTER
+            ========================== -->
+
+            <div class="menu-filter">
+
+                <button
+                    class="filter-btn active"
+                    onclick="filterMenu('all', this)">
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterMenu('veg', this)">
+                    Veg
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterMenu('fish', this)">
+                    Fish
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterMenu('chicken', this)">
+                    Chicken
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterMenu('mutton', this)">
+                    Mutton
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="filterMenu('dessert', this)">
+                    Dessert
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 FOOD GRID
+            ========================== -->
+
+            <div class="food-grid">
+
+
+                <!-- DALMA -->
+
+                <div class="food-card" data-category="veg">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/dalma.jpg"
+                            alt="Dalma">
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+
+                            <h3>Dalma</h3>
+
+                            <strong>₹180</strong>
+
+                        </div>
+
+                        <p>
+                            Traditional Odia lentils cooked with
+                            vegetables and raw papaya.
+                        </p>
+
+                        <div class="food-action">
+
+                            <div class="qty">
+
+                                <button onclick="changeQuantity(this, -1)">
+                                    −
+                                </button>
+
+                                <span>1</span>
+
+                                <button onclick="changeQuantity(this, 1)">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                onclick="addToCart('Dalma', 180, this)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAKHALA -->
+
+                <div class="food-card" data-category="veg">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/pakhala.jpg"
+                            alt="Pakhala Bhata">
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+
+                            <h3>Pakhala Bhata</h3>
+
+                            <strong>₹150</strong>
+
+                        </div>
+
+                        <p>
+                            Traditional fermented rice served
+                            with delicious Odia sides.
+                        </p>
+
+                        <div class="food-action">
+
+                            <div class="qty">
+
+                                <button onclick="changeQuantity(this, -1)">
+                                    −
+                                </button>
+
+                                <span>1</span>
+
+                                <button onclick="changeQuantity(this, 1)">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                onclick="addToCart('Pakhala Bhata', 150, this)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MACHHA BESARA -->
+
+                <div class="food-card" data-category="fish">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/machha-besara.jpg"
+                            alt="Machha Besara">
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+
+                            <h3>Machha Besara</h3>
+
+                            <strong>₹280</strong>
+
+                        </div>
+
+                        <p>
+                            Fresh fish cooked in a traditional
+                            mustard-based Odia gravy.
+                        </p>
+
+                        <div class="food-action">
+
+                            <div class="qty">
+
+                                <button onclick="changeQuantity(this, -1)">
+                                    −
+                                </button>
+
+                                <span>1</span>
+
+                                <button onclick="changeQuantity(this, 1)">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                onclick="addToCart('Machha Besara', 280, this)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHICKEN -->
+
+                <div class="food-card" data-category="chicken">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/chicken-kosha.jpg"
+                            alt="Chicken Kosha">
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+
+                            <h3>Chicken Kosha</h3>
+
+                            <strong>₹320</strong>
+
+                        </div>
+
+                        <p>
+                            Slow-cooked chicken with aromatic
+                            spices and traditional flavors.
+                        </p>
+
+                        <div class="food-action">
+
+                            <div class="qty">
+
+                                <button onclick="changeQuantity(this, -1)">
+                                    −
+                                </button>
+
+                                <span>1</span>
+
+                                <button onclick="changeQuantity(this, 1)">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                onclick="addToCart('Chicken Kosha', 320, this)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MUTTON -->
+
+                <div class="food-card" data-category="mutton">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/mutton-curry.jpg"
+                            alt="Odia Mutton Curry">
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+
+                            <h3>Odia Mutton Curry</h3>
+
+                            <strong>₹390</strong>
+
+                        </div>
+
+                        <p>
+                            Tender mutton cooked with traditional
+                            Odia spices.
+                        </p>
+
+                        <div class="food-action">
+
+                            <div class="qty">
+
+                                <button onclick="changeQuantity(this, -1)">
+                                    −
+                                </button>
+
+                                <span>1</span>
+
+                                <button onclick="changeQuantity(this, 1)">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                onclick="addToCart('Odia Mutton Curry', 390, this)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHHENA PODA -->
+
+                <div class="food-card" data-category="dessert">
+
+                    <div class="food-image">
+
+                        <img
+                            src="images/chhena-poda.jpg"
+                            alt="Chhena Poda">
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <div class="food-title">
+
+                            <h3>Chhena Poda</h3>
+
+                            <strong>₹120</strong>
+
+                        </div>
+
+                        <p>
+                            Odisha's famous caramelized cottage
+                            cheese dessert.
+                        </p>
+
+                        <div class="food-action">
+
+                            <div class="qty">
+
+                                <button onclick="changeQuantity(this, -1)">
+                                    −
+                                </button>
+
+                                <span>1</span>
+
+                                <button onclick="changeQuantity(this, 1)">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                onclick="addToCart('Chhena Poda', 120, this)">
+
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!-- =========================
+     CART
+========================== -->
+
+<section class="cart-section">
+
+    <div class="container">
+
+        <div class="cart-box">
+
+            <div class="cart-header">
+
+                <div>
+
+                    <p class="cart-label">
+                        YOUR ORDER
+                    </p>
+
+                    <h2>
+                        Shopping Cart
+                    </h2>
+
+                    <p>
+                        Items in cart:
+                        <strong id="cart-count">0</strong>
+                    </p>
+
+                </div>
+
+                <div class="cart-total-box">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <h3>
+                        ₹<span id="cart-total">0</span>
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- CART ITEMS -->
+
+            <div
+                id="cart-items"
+                class="cart-items">
+
+            </div>
+
+
+            <!-- CART ACTIONS -->
+
+            <div class="cart-actions">
+
+                <button
+                    onclick="clearCart()"
+                    class="clear-cart-btn">
+
+                    Clear Cart
+
+                </button>
+
+                <button
+                    class="checkout-btn"
+                    onclick="checkoutCart()">
+
+                    Proceed to Checkout →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

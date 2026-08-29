@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Odisha Rasoi</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                🍛 Odisha <span>Rasoi</span>
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+
+                <a href="menu.html" class="order-btn">
+                    Order Now
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTACT HERO
+    ========================== -->
+
+    <section class="contact-hero">
+
+        <div class="container">
+
+            <p>
+                GET IN TOUCH
+            </p>
+
+            <h1>
+                Contact Us
+            </h1>
+
+            <span>
+                We'd love to welcome you to Odisha Rasoi
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT INFORMATION
+    ========================== -->
+
+    <section class="contact-info-section">
+
+        <div class="container">
+
+            <div class="contact-info-grid">
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Visit Us
+                    </h3>
+
+                    <p>
+                        Bhubaneswar, Odisha
+                    </p>
+
+                    <span>
+                        Odisha, India
+                    </span>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <h3>
+                        Call Us
+                    </h3>
+
+                    <p>
+                        +91 98765 43210
+                    </p>
+
+                    <span>
+                        Mon – Sun
+                    </span>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        ✉️
+                    </div>
+
+                    <h3>
+                        Email Us
+                    </h3>
+
+                    <p>
+                        hello@odisharasoi.com
+                    </p>
+
+                    <span>
+                        We reply within 24 hours
+                    </span>
+
+                </div>
+
+
+                <!-- HOURS -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        🕐
+                    </div>
+
+                    <h3>
+                        Opening Hours
+                    </h3>
+
+                    <p>
+                        11:00 AM – 10:30 PM
+                    </p>
+
+                    <span>
+                        Open every day
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT + RESERVATION
+    ========================== -->
+
+    <section class="contact-main-section">
+
+        <div class="container contact-main-grid">
+
+
+            <!-- =========================
+                 CONTACT FORM
+            ========================== -->
+
+            <div class="contact-form-box">
+
+                <div class="form-heading">
+
+                    <p>
+                        SEND US A MESSAGE
+                    </p>
+
+                    <h2>
+                        We'd Love to Hear From You
+                    </h2>
+
+                </div>
+
+
+                <form
+                    id="contact-form"
+                    onsubmit="submitContactForm(event)">
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="contact-name">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contact-name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contact-email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="contact-phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contact-message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            rows="6"
+                            placeholder="Write your message..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="form-submit">
+
+                        Send Message
+
+                    </button>
+
+
+                    <p
+                        id="contact-success"
+                        class="form-success">
+
+                    </p>
+
+                </form>
+
+            </div>
+
+
+            <!-- =========================
+                 RESERVATION FORM
+            ========================== -->
+
+            <div class="reservation-box">
+
+                <div class="form-heading">
+
+                    <p>
+                        TABLE RESERVATION
+                    </p>
+
+                    <h2>
+                        Book Your Table
+                    </h2>
+
+                    <span>
+                        Reserve your table and enjoy
+                        an authentic Odia dining experience.
+                    </span>
+
+                </div>
+
+
+                <form
+                    id="reservation-form"
+                    onsubmit="submitReservation(event)">
+
+
+                    <div class="form-group">
+
+                        <label for="reservation-name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="reservation-name"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="reservation-phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="reservation-phone"
+                            placeholder="Your phone number"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="reservation-date">
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="reservation-date"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="reservation-time">
+                                Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="reservation-time"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="reservation-guests">
+                            Number of Guests
+                        </label>
+
+                        <select
+                            id="reservation-guests"
+                            required>
+
+                            <option value="">
+                                Select guests
+                            </option>
+
+                            <option value="1">
+                                1 Guest
+                            </option>
+
+                            <option value="2">
+                                2 Guests
+                            </option>
+
+                            <option value="3">
+                                3 Guests
+                            </option>
+
+                            <option value="4">
+                                4 Guests
+                            </option>
+
+                            <option value="5">
+                                5 Guests
+                            </option>
+
+                            <option value="6">
+                                6 Guests
+                            </option>
+
+                            <option value="7">
+                                7 Guests
+                            </option>
+
+                            <option value="8">
+                                8 Guests
+                            </option>
+
+                            <option value="9">
+                                9 Guests
+                            </option>
+
+                            <option value="10">
+                                10+ Guests
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="reservation-message">
+                            Special Request
+                        </label>
+
+                        <textarea
+                            id="reservation-message"
+                            rows="4"
+                            placeholder="Birthday, anniversary, special seating, etc."></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="form-submit">
+
+                        Reserve Table
+
+                    </button>
+
+
+                    <p
+                        id="reservation-success"
+                        class="form-success">
+
+                    </p>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAP
+    ========================== -->
+
+    <section class="map-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p>
+                    FIND US
+                </p>
+
+                <h2>
+                    Visit Odisha Rasoi
+                </h2>
+
+                <span>
+                    Located in the heart of Bhubaneswar
+                </span>
+
+            </div>
+
+
+            <div class="map-placeholder">
+
+                <div class="map-content">
+
+                    <div class="map-pin">
+                        📍
+                    </div>
+
+                    <h3>
+                        Odisha Rasoi
+                    </h3>
+
+                    <p>
+                        Bhubaneswar, Odisha, India
+                    </p>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Bhubaneswar%2C%20Odisha"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="map-btn">
+
+                        Open in Google Maps
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="contact-cta">
+
+        <div class="container">
+
+            <p>
+                AUTHENTIC ODISHA • AUTHENTIC TASTE
+            </p>
+
+            <h2>
+                Your Table is
+                <span>Waiting</span>
+            </h2>
+
+            <a
+                href="menu.html"
+                class="primary-btn">
+
+                Explore Our Menu
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

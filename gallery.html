@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Odisha Rasoi</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                🍛 Odisha <span>Rasoi</span>
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="gallery.html" class="active">
+                    Gallery
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="menu.html" class="order-btn">
+                    Order Now
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         GALLERY HERO
+    ========================== -->
+
+    <section class="gallery-hero">
+
+        <div class="container">
+
+            <p>
+                OUR GALLERY
+            </p>
+
+            <h1>
+                A Taste You Can See
+            </h1>
+
+            <span>
+                Explore the food, people and atmosphere
+                of Odisha Rasoi
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="gallery-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <p>
+                    ODISHA RASOI
+                </p>
+
+                <h2>
+                    Our Gallery
+                </h2>
+
+                <span>
+                    Discover our dishes and restaurant
+                </span>
+
+            </div>
+
+
+            <!-- =========================
+                 FILTER
+            ========================== -->
+
+            <div class="gallery-filter">
+
+                <button
+                    class="gallery-filter-btn active"
+                    onclick="filterGallery('all', this)">
+
+                    All
+
+                </button>
+
+
+                <button
+                    class="gallery-filter-btn"
+                    onclick="filterGallery('food', this)">
+
+                    Food
+
+                </button>
+
+
+                <button
+                    class="gallery-filter-btn"
+                    onclick="filterGallery('restaurant', this)">
+
+                    Restaurant
+
+                </button>
+
+
+                <button
+                    class="gallery-filter-btn"
+                    onclick="filterGallery('chef', this)">
+
+                    Kitchen
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 GALLERY GRID
+            ========================== -->
+
+            <div class="gallery-grid">
+
+
+                <!-- IMAGE 1 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="food"
+                    onclick="openLightbox('images/dalma.jpg')">
+
+                    <img
+                        src="images/dalma.jpg"
+                        alt="Dalma">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Dalma
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE 2 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="food"
+                    onclick="openLightbox('images/pakhala.jpg')">
+
+                    <img
+                        src="images/pakhala.jpg"
+                        alt="Pakhala Bhata">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Pakhala Bhata
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE 3 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="food"
+                    onclick="openLightbox('images/machha-besara.jpg')">
+
+                    <img
+                        src="images/machha-besara.jpg"
+                        alt="Machha Besara">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Machha Besara
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE 4 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="food"
+                    onclick="openLightbox('images/chicken-kosha.jpg')">
+
+                    <img
+                        src="images/chicken-kosha.jpg"
+                        alt="Chicken Kosha">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Chicken Kosha
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE 5 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="food"
+                    onclick="openLightbox('images/mutton-curry.jpg')">
+
+                    <img
+                        src="images/mutton-curry.jpg"
+                        alt="Odia Mutton Curry">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Odia Mutton Curry
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE 6 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="food"
+                    onclick="openLightbox('images/chhena-poda.jpg')">
+
+                    <img
+                        src="images/chhena-poda.jpg"
+                        alt="Chhena Poda">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Chhena Poda
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE 7 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="restaurant"
+                    onclick="openLightbox('images/restaurant.jpg')">
+
+                    <img
+                        src="images/restaurant.jpg"
+                        alt="Restaurant">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Restaurant
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGE 8 -->
+
+                <div
+                    class="gallery-item"
+                    data-gallery="chef"
+                    onclick="openLightbox('images/chef.jpg')">
+
+                    <img
+                        src="images/chef.jpg"
+                        alt="Chef">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            Our Kitchen
+                        </span>
+
+                        <b>
+                            +
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LIGHTBOX
+    ========================== -->
+
+    <div
+        id="lightbox"
+        class="lightbox">
+
+        <button
+            class="lightbox-close"
+            onclick="closeLightbox()">
+
+            ×
+
+        </button>
+
+
+        <img
+            id="lightbox-image"
+            src=""
+            alt="Gallery Image">
+
+    </div>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="gallery-cta">
+
+        <div class="container">
+
+            <p>
+                HUNGRY YET?
+            </p>
+
+            <h2>
+                Taste What You
+                <span>See</span>
+            </h2>
+
+            <a
+                href="menu.html"
+                class="primary-btn">
+
+                Explore Menu
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
