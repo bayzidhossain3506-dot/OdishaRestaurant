@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Odisha Rasoi</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body id="dashboard">
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="brand">🍛 <span>Odisha Rasoi</span></div>
+      <a class="side-link active" href="dashboard.html">📊 <span>Dashboard</span></a>
+      <a class="side-link" href="#menu-management">🍽️ <span>Menu</span></a>
+      <a class="side-link" href="../index.html">🌐 <span>View Website</span></a>
+      <button class="logout" onclick="logout()">Logout</button>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div><p class="eyebrow">ODISHA RASOI</p><h1>Admin Dashboard</h1></div>
+        <span class="muted">Restaurant Management</span>
+      </div>
+
+      <section class="grid">
+        <div class="stat-card"><span>Total Menu Items</span><strong id="menu-count">0</strong></div>
+        <div class="stat-card"><span>Available Items</span><strong id="available-count">0</strong></div>
+        <div class="stat-card"><span>Categories</span><strong id="category-count">0</strong></div>
+      </section>
+
+      <section class="panel" id="menu-management">
+        <h2>Menu Management</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Item</th><th>Category</th><th>Price</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody id="menu-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Add Menu Item</h2>
+        <form id="add-form" class="form-grid">
+          <div class="field"><label for="item-name">Food Name</label><input id="item-name" required placeholder="e.g. Khaja"></div>
+          <div class="field"><label for="item-category">Category</label><select id="item-category"><option>Veg</option><option>Fish</option><option>Chicken</option><option>Mutton</option><option>Dessert</option></select></div>
+          <div class="field"><label for="item-price">Price (₹)</label><input id="item-price" type="number" min="1" required placeholder="150"></div>
+          <div class="field" style="display:flex;align-items:end"><button class="primary" type="submit">+ Add Item</button></div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Orders</h2>
+        <p class="muted">Online ordering is currently frontend-only, so there are no real orders stored yet.</p>
+      </section>
+    </main>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

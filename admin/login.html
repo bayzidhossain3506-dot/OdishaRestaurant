@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Odisha Rasoi</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="brand">🍛 <span>Odisha Rasoi</span></div>
+    <p class="eyebrow">RESTAURANT ADMIN</p>
+    <h1>Admin Login</h1>
+    <p class="muted">Sign in to manage your restaurant.</p>
+
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="admin@odisharasoi.com" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter password" required>
+
+      <button class="primary" type="submit">Login</button>
+      <p id="login-error" class="error"></p>
+    </form>
+
+    <a class="back-link" href="../index.html">← Back to website</a>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>
