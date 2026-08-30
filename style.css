@@ -1,0 +1,5426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf0;
+    color: #222;
+}
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fffaf0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #8b1e1e;
+}
+
+.logo span {
+    color: #d49a17;
+}
+
+
+/* =========================
+   NAV MENU
+========================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #b52b27;
+}
+
+.nav-menu .active {
+    color: #b52b27;
+}
+
+
+/* =========================
+   ORDER BUTTON
+========================= */
+
+.order-btn {
+    background: #b52b27;
+    color: white !important;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #8e1f1c;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("../images/odisha-food.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Dark overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    color: white;
+
+    max-width: 800px;
+}
+
+.hero-small-title {
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    color: #f1c75b;
+}
+
+.hero h1 {
+    font-size: 62px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #f1c75b;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+
+    color: #f5f5f5;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+/* Primary */
+
+.primary-btn {
+    background: #b52b27;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #8e1f1c;
+    transform: translateY(-2px);
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+    background: transparent;
+
+    color: white;
+
+    border: 2px solid white;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #222;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 140px);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+/* =========================
+   MENU HERO
+========================= */
+
+.menu-hero {
+    min-height: 320px;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-hero p {
+    color: #f1c75b;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.menu-hero h1 {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.menu-hero span {
+    font-size: 18px;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   MENU SECTION
+========================= */
+
+.menu-section {
+    padding: 80px 0;
+
+    background: #fffaf0;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: #b52b27;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+
+    margin-bottom: 12px;
+
+    color: #222;
+}
+
+.section-heading span {
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOD GRID
+========================= */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.food-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.food-image {
+    width: 100%;
+
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   FOOD INFO
+========================= */
+
+.food-info {
+    padding: 22px;
+}
+
+.food-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.food-title h3 {
+    font-size: 21px;
+
+    color: #222;
+}
+
+.food-title strong {
+    color: #b52b27;
+
+    font-size: 20px;
+}
+
+.food-info p {
+    color: #777;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   ADD CART BUTTON
+========================= */
+
+.add-cart {
+    width: 100%;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    background: #b52b27;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.add-cart:hover {
+    background: #8e1f1c;
+}
+
+
+/* =========================
+   CART
+========================= */
+
+.cart-section {
+    padding: 30px 0 60px;
+
+    background: #fffaf0;
+}
+
+.cart-box {
+    background: #222;
+
+    color: white;
+
+    padding: 25px 30px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.cart-box h2 {
+    margin-bottom: 7px;
+}
+
+.cart-box p {
+    color: #cccccc;
+}
+
+.cart-box h3 {
+    font-size: 22px;
+}
+
+.cart-box h3 span {
+    color: #f1c75b;
+}
+
+
+/* =========================
+   MENU MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .food-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-hero h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .cart-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+/* =========================
+   MENU FILTER
+========================= */
+
+.menu-filter {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+.filter-btn {
+    border: 1px solid #ddd;
+
+    background: white;
+
+    color: #444;
+
+    padding: 11px 24px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background: #b52b27;
+
+    color: white;
+
+    border-color: #b52b27;
+}
+
+.filter-btn.active {
+    background: #b52b27;
+
+    color: white;
+
+    border-color: #b52b27;
+}
+
+
+/* =========================
+   FOOD ACTION
+========================= */
+
+.food-action {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+.qty {
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    height: 42px;
+}
+
+.qty button {
+    width: 36px;
+
+    height: 100%;
+
+    border: none;
+
+    background: #f5f5f5;
+
+    color: #333;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.qty button:hover {
+    background: #e8e8e8;
+}
+
+.qty span {
+    width: 30px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   CART BUTTON
+========================= */
+
+.food-action .add-cart {
+    flex: 1;
+
+    height: 42px;
+
+    padding: 0 10px;
+}
+
+
+/* =========================
+   HIDDEN FOOD CARD
+========================= */
+
+.food-card.hidden {
+    display: none;
+}
+
+
+/* =========================
+   MOBILE FILTER
+========================= */
+
+@media (max-width: 600px) {
+
+    .menu-filter {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 9px 16px;
+
+        font-size: 13px;
+    }
+
+    .food-action {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .qty {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .food-action .add-cart {
+        width: 100%;
+    }
+
+}
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome-section {
+    padding: 100px 0;
+
+    background: #fffaf0;
+}
+
+.welcome-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.welcome-image {
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.welcome-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.welcome-content {
+    max-width: 550px;
+}
+
+.section-label {
+    color: #b52b27;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.welcome-content h2 {
+    font-size: 44px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.welcome-content h2 span {
+    color: #b52b27;
+}
+
+.welcome-content p:not(.section-label) {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.text-btn {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #b52b27;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.text-btn:hover {
+    color: #8e1f1c;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   POPULAR SECTION
+========================= */
+
+.popular-section {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.popular-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.popular-card {
+    background: #fffaf0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.popular-card:hover {
+    transform: translateY(-7px);
+}
+
+.popular-image {
+    height: 220px;
+
+    overflow: hidden;
+}
+
+.popular-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.popular-card:hover .popular-image img {
+    transform: scale(1.08);
+}
+
+.popular-info {
+    padding: 20px;
+}
+
+.popular-info h3 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.popular-info p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    min-height: 67px;
+
+    margin-bottom: 15px;
+}
+
+.popular-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.popular-bottom strong {
+    color: #b52b27;
+
+    font-size: 19px;
+}
+
+.popular-bottom a {
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.popular-bottom a:hover {
+    color: #b52b27;
+}
+
+.center-button {
+    text-align: center;
+
+    margin-top: 45px;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-section {
+    padding: 100px 0;
+
+    background: #fffaf0;
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.why-card {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.06);
+}
+
+.why-icon {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats-section {
+    padding: 70px 0;
+
+    background: #222;
+
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    text-align: center;
+}
+
+.stat {
+    padding: 15px;
+
+    border-right: 1px solid #444;
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong {
+    display: block;
+
+    color: #f1c75b;
+
+    font-size: 38px;
+
+    margin-bottom: 8px;
+}
+
+.stat span {
+    color: #cccccc;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta-section {
+    min-height: 500px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    background-image:
+        url("../images/restaurant.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.cta-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+}
+
+.cta-content > p:first-child {
+    color: #f1c75b;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.cta-content h2 {
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.cta-content h2 span {
+    color: #f1c75b;
+}
+
+.cta-content > p:not(:first-child) {
+    color: #eeeeee;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   HOME MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .popular-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 30px;
+    }
+
+    .stat:nth-child(2) {
+        border-right: none;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .welcome-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .welcome-image {
+        height: 400px;
+    }
+
+    .welcome-content h2 {
+        font-size: 36px;
+    }
+
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        border-right: none;
+
+        border-bottom: 1px solid #444;
+
+        padding-bottom: 25px;
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+
+}
+/* =========================
+   ABOUT HERO
+========================= */
+
+.about-hero {
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.62)
+        ),
+        url("../images/restaurant.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.about-hero p {
+    color: #f1c75b;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.about-hero h1 {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.about-hero span {
+    font-size: 18px;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story-section {
+    padding: 100px 0;
+
+    background: #fffaf0;
+}
+
+.story-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.story-image {
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.story-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.story-content {
+    max-width: 570px;
+}
+
+.story-content h2 {
+    font-size: 43px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.story-content h2 span {
+    color: #b52b27;
+}
+
+.story-content p:not(.section-label) {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================
+   CULTURE
+========================= */
+
+.culture-section {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.culture-card {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: #fffaf0;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.culture-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08);
+}
+
+.culture-icon {
+    font-size: 40px;
+
+    margin-bottom: 18px;
+}
+
+.culture-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+.culture-card p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CHEF
+========================= */
+
+.chef-section {
+    padding: 100px 0;
+
+    background: #fffaf0;
+}
+
+.chef-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.chef-content {
+    max-width: 550px;
+}
+
+.chef-content h2 {
+    font-size: 43px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.chef-content h2 span {
+    color: #b52b27;
+}
+
+.chef-content p:not(.section-label) {
+    color: #666;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.chef-signature {
+    margin-top: 25px;
+
+    color: #b52b27;
+
+    font-weight: 700;
+
+    font-style: italic;
+}
+
+.chef-image {
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.chef-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   VALUES
+========================= */
+
+.values-section {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.value-card {
+    padding: 30px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 10px;
+
+    background: #fffaf0;
+}
+
+.value-card span {
+    display: inline-block;
+
+    color: #b52b27;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #777;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT CTA
+========================= */
+
+.about-cta {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.about-cta p {
+    color: #f1c75b;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.about-cta h2 {
+    font-size: 45px;
+
+    margin-bottom: 30px;
+}
+
+.about-cta h2 span {
+    color: #f1c75b;
+}
+
+
+/* =========================
+   ABOUT MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .culture-grid,
+    .values-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .story-grid,
+    .chef-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .story-image,
+    .chef-image {
+        height: 400px;
+    }
+
+    .story-content h2,
+    .chef-content h2 {
+        font-size: 36px;
+    }
+
+    .culture-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero h1 {
+        font-size: 38px;
+    }
+
+    .about-cta h2 {
+        font-size: 36px;
+    }
+
+}
+/* =========================
+   GALLERY HERO
+========================= */
+
+.gallery-hero {
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.62)
+        ),
+        url("../images/restaurant.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.gallery-hero p {
+    color: #f1c75b;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.gallery-hero h1 {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.gallery-hero span {
+    font-size: 18px;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section {
+    padding: 100px 0;
+
+    background: #fffaf0;
+}
+
+
+/* =========================
+   GALLERY FILTER
+========================= */
+
+.gallery-filter {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+.gallery-filter-btn {
+    padding: 11px 24px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #444;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.gallery-filter-btn:hover {
+    background: #b52b27;
+
+    color: white;
+
+    border-color: #b52b27;
+}
+
+.gallery-filter-btn.active {
+    background: #b52b27;
+
+    color: white;
+
+    border-color: #b52b27;
+}
+
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 280px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    background: #ddd;
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   GALLERY OVERLAY
+========================= */
+
+.gallery-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding: 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent 45%,
+            rgba(0, 0, 0, 0.75)
+        );
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.gallery-overlay b {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #222;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   HIDDEN GALLERY
+========================= */
+
+.gallery-item.gallery-hidden {
+    display: none;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #222;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   GALLERY CTA
+========================= */
+
+.gallery-cta {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.gallery-cta p {
+    color: #f1c75b;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.gallery-cta h2 {
+    font-size: 45px;
+
+    margin-bottom: 30px;
+}
+
+.gallery-cta h2 span {
+    color: #f1c75b;
+}
+
+
+/* =========================
+   GALLERY MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 300px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 38px;
+    }
+
+    .gallery-cta h2 {
+        font-size: 36px;
+    }
+
+}
+/* =========================
+   CONTACT HERO
+========================= */
+
+.contact-hero {
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.62)
+        ),
+        url("../images/restaurant.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.contact-hero p {
+    color: #f1c75b;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.contact-hero h1 {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.contact-hero span {
+    font-size: 18px;
+
+    color: #eeeeee;
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.contact-info-section {
+    padding: 70px 0;
+
+    background: white;
+}
+
+.contact-info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.contact-card {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    background: #fffaf0;
+
+    border-radius: 10px;
+
+    border: 1px solid #eeeeee;
+}
+
+.contact-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.contact-card span {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONTACT MAIN
+========================= */
+
+.contact-main-section {
+    padding: 100px 0;
+
+    background: #fffaf0;
+}
+
+.contact-main-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================
+   FORM BOXES
+========================= */
+
+.contact-form-box,
+.reservation-box {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 25px
+        rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================
+   FORM HEADING
+========================= */
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.form-heading p {
+    color: #b52b27;
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.form-heading h2 {
+    font-size: 30px;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+}
+
+.form-heading span {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM ROW
+========================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #b52b27;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(181, 43, 39, 0.08);
+}
+
+
+/* =========================
+   FORM BUTTON
+========================= */
+
+.form-submit {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #b52b27;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.form-submit:hover {
+    background: #8e1f1c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FORM SUCCESS
+========================= */
+
+.form-success {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    background: #edf8ed;
+
+    color: #287328;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.form-success.show {
+    display: block;
+}
+
+
+/* =========================
+   MAP
+========================= */
+
+.map-section {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.map-placeholder {
+    min-height: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9e4d8,
+            #d7d0c0
+        );
+}
+
+.map-content {
+    padding: 30px;
+}
+
+.map-pin {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+.map-content h3 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.map-content p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.map-btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    background: #b52b27;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background: #8e1f1c;
+}
+
+
+/* =========================
+   CONTACT CTA
+========================= */
+
+.contact-cta {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 0, 0, 0.68)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.contact-cta p {
+    color: #f1c75b;
+
+    letter-spacing: 3px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.contact-cta h2 {
+    font-size: 45px;
+
+    margin-bottom: 30px;
+}
+
+.contact-cta h2 span {
+    color: #f1c75b;
+}
+
+
+/* =========================
+   CONTACT MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .contact-info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .contact-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-box,
+    .reservation-box {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 38px;
+    }
+
+    .contact-cta h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================
+   PREMIUM RESTAURANT BACKGROUND
+========================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(181, 43, 39, 0.035),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(191, 148, 55, 0.05),
+            transparent 30%
+        ),
+        #faf7f0;
+
+    color: #29231f;
+}
+
+
+/* =========================================
+   PREMIUM SECTION BACKGROUNDS
+========================================= */
+
+.story-section,
+.gallery-section,
+.contact-main-section {
+    background:
+        linear-gradient(
+            rgba(255, 250, 240, 0.94),
+            rgba(255, 250, 240, 0.94)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: 500px;
+    background-repeat: repeat;
+}
+
+
+.culture-section,
+.values-section,
+.contact-info-section,
+.map-section {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(181, 43, 39, 0.035),
+            transparent 40%
+        ),
+        #ffffff;
+}
+
+
+/* =========================================
+   PREMIUM CARD EFFECT
+========================================= */
+
+.culture-card,
+.value-card,
+.contact-card,
+.contact-form-box,
+.reservation-box {
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(181, 43, 39, 0.08);
+
+    box-shadow:
+        0 10px 35px rgba(55, 35, 20, 0.06);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   PREMIUM HERO OVERLAY
+========================================= */
+
+.about-hero,
+.gallery-hero,
+.contact-hero {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-hero::before,
+.gallery-hero::before,
+.contact-hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0, 0, 0, 0.35) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   PREMIUM SECTION HEADING
+========================================= */
+
+.section-heading {
+    position: relative;
+}
+
+.section-heading::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 2px;
+
+    margin: 18px auto 0;
+
+    background: #c79a3b;
+}
+
+
+/* =========================================
+   PREMIUM GOLD DETAIL
+========================================= */
+
+.section-label,
+.section-heading p {
+    color: #a87822;
+}
+
+
+/* =========================================
+   PREMIUM CTA
+========================================= */
+
+.about-cta,
+.gallery-cta,
+.contact-cta {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-cta::before,
+.gallery-cta::before,
+.contact-cta::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(199, 154, 59, 0.12),
+            transparent 55%
+        );
+
+    pointer-events: none;
+}
+/* =========================================
+   PREMIUM FOOTER
+========================================= */
+
+.site-footer {
+    position: relative;
+
+    padding: 75px 0 0;
+
+    color: #e9e1d5;
+
+    background:
+        radial-gradient(
+            circle at 20% 0%,
+            rgba(199, 154, 59, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #241713,
+            #160e0c
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   FOOTER DECORATION
+========================================= */
+
+.site-footer::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #c79a3b,
+            transparent
+        );
+}
+
+
+/* =========================================
+   FOOTER GRID
+========================================= */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1.3fr
+        1.2fr;
+
+    gap: 50px;
+
+    padding-bottom: 55px;
+}
+
+
+/* =========================================
+   FOOTER BRAND
+========================================= */
+
+.footer-brand {
+    max-width: 330px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    font-weight: 700;
+}
+
+.footer-logo span {
+    color: #c79a3b;
+}
+
+.footer-brand > p {
+    color: #bdb1a6;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   SOCIAL BUTTONS
+========================================= */
+
+.footer-social {
+    display: flex;
+
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(199, 154, 59, 0.35);
+
+    border-radius: 50%;
+
+    color: #c79a3b;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #c79a3b;
+
+    color: #241713;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    position: relative;
+
+    color: white;
+
+    font-size: 17px;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 30px;
+
+    height: 2px;
+
+    background: #c79a3b;
+}
+
+.footer-column a {
+    margin-bottom: 12px;
+
+    color: #bdb1a6;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: #c79a3b;
+
+    transform: translateX(4px);
+}
+
+.footer-column p {
+    margin-bottom: 12px;
+
+    color: #bdb1a6;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.footer-column strong {
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.footer-note {
+    font-size: 13px !important;
+
+    color: #8f8278 !important;
+}
+
+
+/* =========================================
+   FOOTER BOOK BUTTON
+========================================= */
+
+.footer-book-btn {
+    margin-top: 12px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #c79a3b;
+
+    border-radius: 5px;
+
+    color: #c79a3b !important;
+
+    font-weight: 600;
+
+    transition: 0.3s !important;
+}
+
+.footer-book-btn:hover {
+    background: #c79a3b;
+
+    color: #241713 !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #82766d;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FOOTER MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding-top: 55px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        align-items: center;
+    }
+
+}
+/* =========================================
+   LUXURY ODISHA RESTAURANT BACKGROUND
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5efe3;
+    color: #241914;
+}
+
+
+/* =========================================
+   LUXURY MAIN SECTIONS
+========================================= */
+
+.story-section,
+.gallery-section,
+.contact-main-section {
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(248, 242, 230, 0.94),
+            rgba(248, 242, 230, 0.94)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Decorative gold pattern */
+
+.story-section::before,
+.gallery-section::before,
+.contact-main-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.22;
+
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            #b58a3c 1px,
+            transparent 1.5px
+        );
+
+    background-size: 28px 28px;
+}
+
+
+/* Keep content above decoration */
+
+.story-section > .container,
+.gallery-section > .container,
+.contact-main-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================
+   WHITE / CREAM SECTIONS
+========================================= */
+
+.culture-section,
+.values-section,
+.contact-info-section,
+.map-section {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8 0%,
+            #f6eee0 50%,
+            #fffaf2 100%
+        );
+}
+
+
+/* =========================================
+   PREMIUM GOLD DIVIDER
+========================================= */
+
+.story-section::after,
+.culture-section::after,
+.chef-section::after,
+.values-section::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90px;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #b58a3c,
+            transparent
+        );
+}
+
+
+/* =========================================
+   CHEF SECTION
+========================================= */
+
+.chef-section {
+    position: relative;
+
+    background:
+        linear-gradient(
+            110deg,
+            #321b17,
+            #5a2924,
+            #2a1714
+        );
+
+    color: white;
+}
+
+.chef-section .chef-content h2,
+.chef-section .chef-content p {
+    color: white;
+}
+
+.chef-section .section-label {
+    color: #d7ad58;
+}
+
+.chef-section .chef-signature {
+    color: #d7ad58;
+}
+
+
+/* =========================================
+   LUXURY CARDS
+========================================= */
+
+.culture-card,
+.value-card,
+.contact-card,
+.contact-form-box,
+.reservation-box {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.96),
+            rgba(250,243,231,0.94)
+        );
+
+    border: 1px solid rgba(181,138,60,0.20);
+
+    box-shadow:
+        0 15px 45px rgba(55,30,20,0.09),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    border-radius: 14px;
+}
+
+
+/* Gold top line */
+
+.culture-card::before,
+.value-card::before,
+.contact-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 45px;
+
+    height: 2px;
+
+    background: #b58a3c;
+}
+
+
+/* =========================================
+   PREMIUM HERO SECTIONS
+========================================= */
+
+.about-hero,
+.gallery-hero,
+.contact-hero {
+    min-height: 420px;
+
+    position: relative;
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow:
+        inset 0 -80px 100px rgba(0,0,0,0.35);
+}
+
+
+/* Strong cinematic overlay */
+
+.about-hero::after,
+.gallery-hero::after,
+.contact-hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,10,8,0.82),
+            rgba(20,10,8,0.45),
+            rgba(20,10,8,0.78)
+        );
+
+    pointer-events: none;
+}
+
+
+/* Put hero text above overlay */
+
+.about-hero .container,
+.gallery-hero .container,
+.contact-hero .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   HERO GOLD TEXT
+========================================= */
+
+.about-hero p,
+.gallery-hero p,
+.contact-hero p {
+    color: #d9ad55;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 2px 12px rgba(0,0,0,0.5);
+}
+
+.about-hero h1,
+.gallery-hero h1,
+.contact-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 4px 25px rgba(0,0,0,0.7);
+}
+
+
+/* =========================================
+   PREMIUM CTA SECTIONS
+========================================= */
+
+.about-cta,
+.gallery-cta,
+.contact-cta {
+    position: relative;
+
+    min-height: 360px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(30,12,9,0.92),
+            rgba(70,25,20,0.72),
+            rgba(30,12,9,0.92)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+
+/* Gold glow */
+
+.about-cta::before,
+.gallery-cta::before,
+.contact-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(208,166,78,0.16),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   PREMIUM BUTTON
+========================================= */
+
+.primary-btn,
+.order-btn,
+.form-submit {
+    box-shadow:
+        0 8px 25px rgba(100,25,20,0.22);
+}
+
+.primary-btn:hover,
+.order-btn:hover,
+.form-submit:hover {
+    box-shadow:
+        0 12px 30px rgba(100,25,20,0.30);
+}
+
+
+/* =========================================
+   PREMIUM IMAGE FRAMES
+========================================= */
+
+.story-image,
+.chef-image {
+    position: relative;
+
+    padding: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b58a3c,
+            #f0d58e,
+            #8f6828
+        );
+
+    border-radius: 15px;
+}
+
+.story-image img,
+.chef-image img {
+    border-radius: 9px;
+}
+
+
+/* =========================================
+   MAP PREMIUM STYLE
+========================================= */
+
+.map-placeholder {
+    border:
+        1px solid rgba(181,138,60,0.3);
+
+    box-shadow:
+        0 20px 50px rgba(50,25,15,0.10);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8dcc6,
+            #cdbb9c
+        );
+}
+
+
+/* =========================================
+   PREMIUM SECTION HEADINGS
+========================================= */
+
+.section-heading h2,
+.form-heading h2 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: #2b1a15;
+}
+
+.section-heading p,
+.form-heading p {
+    color: #a87929;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .about-hero,
+    .gallery-hero,
+    .contact-hero {
+        min-height: 340px;
+    }
+
+    .about-cta,
+    .gallery-cta,
+    .contact-cta {
+        min-height: 300px;
+
+        background-attachment: scroll;
+    }
+
+    .story-section,
+    .gallery-section,
+    .contact-main-section {
+        background-attachment: scroll;
+    }
+
+}
+/* =========================================
+   DARK LUXURY RESTAURANT THEME
+========================================= */
+
+body {
+    background: #110d0b;
+    color: #f5eee3;
+}
+
+
+/* =========================================
+   DARK MAIN SECTIONS
+========================================= */
+
+.story-section,
+.gallery-section,
+.contact-main-section {
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(143, 38, 31, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 90%,
+            rgba(184, 139, 55, 0.08),
+            transparent 35%
+        ),
+        #15100e;
+}
+
+
+/* =========================================
+   DARK ALTERNATING SECTIONS
+========================================= */
+
+.culture-section,
+.values-section,
+.contact-info-section,
+.map-section {
+    background:
+        linear-gradient(
+            135deg,
+            #1b1411,
+            #100c0a
+        );
+}
+
+
+/* =========================================
+   SECTION TEXT
+========================================= */
+
+.section-heading h2,
+.form-heading h2,
+.story-content h2,
+.chef-content h2 {
+    color: #f7efe2;
+}
+
+.section-heading span,
+.story-content p,
+.chef-content p {
+    color: #b9aaa0;
+}
+
+.section-heading p,
+.section-label,
+.form-heading p {
+    color: #d2a64f;
+}
+
+
+/* =========================================
+   DARK CARDS
+========================================= */
+
+.culture-card,
+.value-card,
+.contact-card,
+.contact-form-box,
+.reservation-box {
+    background:
+        linear-gradient(
+            145deg,
+            #241914,
+            #17100d
+        );
+
+    border: 1px solid rgba(207, 163, 76, 0.20);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.40);
+
+    color: #f5eee3;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.culture-card h3,
+.value-card h3,
+.contact-card h3 {
+    color: #f7efe2;
+}
+
+.culture-card p,
+.value-card p,
+.contact-card span {
+    color: #a99a90;
+}
+
+.contact-card p {
+    color: #e8ded1;
+}
+
+
+/* =========================================
+   STORY IMAGE
+========================================= */
+
+.story-image,
+.chef-image {
+    background:
+        linear-gradient(
+            135deg,
+            #c99a3d,
+            #f0d78d,
+            #76551e
+        );
+}
+
+
+/* =========================================
+   CHEF SECTION
+========================================= */
+
+.chef-section {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(193, 145, 52, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #321614,
+            #170d0b
+        );
+}
+
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+.form-group label {
+    color: #e9dfd2;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    background: #100c0a;
+
+    border: 1px solid #49352c;
+
+    color: #f5eee3;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #75685f;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #c99a3d;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(201, 154, 61, 0.10);
+}
+
+
+/* =========================================
+   SELECT OPTION
+========================================= */
+
+.form-group select option {
+    background: #17100d;
+
+    color: #f5eee3;
+}
+
+
+/* =========================================
+   MAP
+========================================= */
+
+.map-placeholder {
+    background:
+        linear-gradient(
+            135deg,
+            #29211b,
+            #17110e
+        );
+
+    border: 1px solid rgba(201, 154, 61, 0.25);
+}
+
+.map-content h3 {
+    color: #f5eee3;
+}
+
+.map-content p {
+    color: #a99b91;
+}
+
+
+/* =========================================
+   DARK GALLERY FILTER
+========================================= */
+
+.gallery-filter-btn {
+    background: #1b1411;
+
+    border-color: #4a362c;
+
+    color: #d8ccc0;
+}
+
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
+    background: #8e2924;
+
+    border-color: #b34a42;
+
+    color: white;
+}
+
+
+/* =========================================
+   DARK LIGHTBOX
+========================================= */
+
+.lightbox {
+    background:
+        rgba(5, 3, 2, 0.96);
+}
+
+
+/* =========================================
+   DARK CTA
+========================================= */
+
+.about-cta,
+.gallery-cta,
+.contact-cta {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 4, 3, 0.96),
+            rgba(61, 19, 16, 0.80),
+            rgba(8, 4, 3, 0.96)
+        ),
+        url("../images/odisha-food.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* =========================================
+   CTA TEXT
+========================================= */
+
+.about-cta h2,
+.gallery-cta h2,
+.contact-cta h2 {
+    color: #fff8ed;
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.form-success {
+    background: #172719;
+
+    color: #9ed59e;
+
+    border: 1px solid #315931;
+}
+
+
+/* =========================================
+   PREMIUM DARK GLOW
+========================================= */
+
+.story-section,
+.gallery-section,
+.contact-main-section,
+.culture-section,
+.values-section,
+.contact-info-section {
+    position: relative;
+}
+
+.story-section::before,
+.gallery-section::before,
+.contact-main-section::before,
+.culture-section::before,
+.values-section::before,
+.contact-info-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(201, 154, 61, 0.045),
+            transparent 45%
+        );
+}
+
+
+/* =========================================
+   CONTENT ABOVE GLOW
+========================================= */
+
+.story-section > .container,
+.gallery-section > .container,
+.contact-main-section > .container,
+.culture-section > .container,
+.values-section > .container,
+.contact-info-section > .container {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   GOLD BUTTON
+========================================= */
+
+.primary-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #d3a84f,
+            #a87825
+        );
+
+    color: #1a100b;
+
+    font-weight: 700;
+
+    border: none;
+}
+
+.primary-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #e5c06d,
+            #bd8c31
+        );
+
+    color: #160d09;
+}
+
+
+/* =========================================
+   DARK ORDER BUTTON
+========================================= */
+
+.order-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #c99a3d,
+            #9b7025
+        );
+
+    color: #160d09 !important;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DARK FORM BUTTON
+========================================= */
+
+.form-submit {
+    background:
+        linear-gradient(
+            135deg,
+            #c99a3d,
+            #9b7025
+        );
+
+    color: #160d09;
+}
+
+.form-submit:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #e0ba61,
+            #b98428
+        );
+}
+
+
+/* =========================================
+   PREMIUM GOLD HEADLINE ACCENT
+========================================= */
+
+.story-content h2 span,
+.chef-content h2 span,
+.about-cta h2 span,
+.gallery-cta h2 span,
+.contact-cta h2 span {
+    color: #d2a64f;
+}
+
+
+/* =========================================
+   DARK HERO
+========================================= */
+
+.about-hero,
+.gallery-hero,
+.contact-hero {
+    background-color: #0b0807;
+
+    box-shadow:
+        inset 0 -100px 120px rgba(0, 0, 0, 0.65);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        background: #110d0b;
+    }
+
+}
+/* =========================================
+   PREMIUM CART
+========================================= */
+
+.cart-section {
+    padding: 70px 0 100px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(201, 154, 61, 0.08),
+            transparent 40%
+        ),
+        #110d0b;
+}
+
+
+.cart-box {
+    padding: 35px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #241914,
+            #17100d
+        );
+
+    border:
+        1px solid rgba(201, 154, 61, 0.22);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.40);
+}
+
+
+/* HEADER */
+
+.cart-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.cart-label {
+    color: #d2a64f;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.cart-header h2 {
+    color: #f7efe2;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    margin-bottom: 8px;
+}
+
+
+.cart-header p {
+    color: #95877d;
+
+    font-size: 14px;
+}
+
+
+.cart-header p strong {
+    color: #d2a64f;
+}
+
+
+/* TOTAL */
+
+.cart-total-box {
+    text-align: right;
+}
+
+
+.cart-total-box span {
+    display: block;
+
+    color: #95877d;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+.cart-total-box h3 {
+    color: #d2a64f;
+
+    font-size: 28px;
+}
+
+
+/* CART ITEMS */
+
+.cart-items {
+    padding: 10px 0;
+}
+
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.07);
+}
+
+
+.cart-item-info h3 {
+    color: #f5eee3;
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+
+.cart-item-info p {
+    color: #8f8178;
+
+    font-size: 13px;
+}
+
+
+.cart-item-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.cart-item-right > strong {
+    color: #d2a64f;
+
+    font-size: 17px;
+}
+
+
+/* QUANTITY */
+
+.cart-item-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.cart-item-controls button {
+    width: 30px;
+
+    height: 30px;
+
+    border: 1px solid #49352c;
+
+    border-radius: 5px;
+
+    background: #100c0a;
+
+    color: #e8ded1;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.cart-item-controls button:hover {
+    border-color: #c99a3d;
+
+    color: #c99a3d;
+}
+
+
+.cart-item-controls span {
+    min-width: 20px;
+
+    text-align: center;
+
+    color: #f5eee3;
+
+    font-size: 14px;
+}
+
+
+/* REMOVE */
+
+.cart-item-controls .remove-cart {
+    margin-left: 8px;
+
+    border-color: #6c2a25;
+
+    color: #d76b63;
+}
+
+
+.cart-item-controls .remove-cart:hover {
+    background: #8e2924;
+
+    border-color: #8e2924;
+
+    color: white;
+}
+
+
+/* EMPTY CART */
+
+.empty-cart {
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+
+.empty-cart span {
+    display: block;
+
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+
+.empty-cart p {
+    color: #f5eee3;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+.empty-cart small {
+    color: #8f8178;
+
+    font-size: 13px;
+}
+
+
+/* CART ACTIONS */
+
+.cart-actions {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 25px;
+}
+
+
+.clear-cart-btn,
+.checkout-btn {
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.clear-cart-btn {
+    background: transparent;
+
+    border: 1px solid #553a31;
+
+    color: #aa9990;
+}
+
+
+.clear-cart-btn:hover {
+    border-color: #8e2924;
+
+    color: #d76b63;
+}
+
+
+.checkout-btn {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d3a84f,
+            #a87825
+        );
+
+    color: #160d09;
+
+    box-shadow:
+        0 8px 25px rgba(100,25,20,0.20);
+}
+
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #e4bd69,
+            #bd8c31
+        );
+}
+
+
+/* ADDED BUTTON */
+
+.add-cart.added {
+    background: #3b6b3b;
+
+    color: white;
+
+    border-color: #3b6b3b;
+}
+
+
+/* MOBILE CART */
+
+@media (max-width: 650px) {
+
+    .cart-box {
+        padding: 25px 18px;
+    }
+
+    .cart-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .cart-total-box {
+        text-align: left;
+    }
+
+    .cart-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .cart-item-right {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .clear-cart-btn,
+    .checkout-btn {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   PREMIUM WELCOME SECTION
+========================================================= */
+
+.welcome-section {
+    position: relative;
+    padding: 110px 0;
+
+    background:
+        radial-gradient(
+            circle at 10% 50%,
+            rgba(128, 36, 30, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(210, 166, 79, 0.07),
+            transparent 30%
+        ),
+        #0d0a08;
+}
+
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+
+/* WELCOME IMAGE */
+
+.welcome-image {
+    position: relative;
+
+    padding: 6px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6e4b18,
+            #d7ad59,
+            #76521d,
+            #b9852e
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55);
+}
+
+.welcome-image::before {
+    content: "";
+
+    position: absolute;
+
+    top: -14px;
+    left: -14px;
+
+    width: 80px;
+    height: 80px;
+
+    border-top: 2px solid #d2a64f;
+    border-left: 2px solid #d2a64f;
+
+    border-radius: 8px 0 0 0;
+
+    opacity: 0.65;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+    filter: brightness(0.88);
+
+    transition: 0.5s ease;
+}
+
+.welcome-image:hover img {
+    filter: brightness(1);
+
+    transform: scale(1.015);
+}
+
+
+/* WELCOME CONTENT */
+
+.welcome-content {
+    max-width: 590px;
+}
+
+.welcome-content .section-label {
+    margin-bottom: 16px;
+
+    color: #d2a64f;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.welcome-content h2 {
+    color: #f6eee3;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 4vw, 54px);
+
+    font-weight: 500;
+
+    line-height: 1.13;
+
+    letter-spacing: -0.5px;
+}
+
+.welcome-content h2 span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #cfa34c;
+}
+
+.welcome-content p:not(.section-label) {
+    margin-top: 21px;
+
+    color: #aa9c91;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* DISCOVER STORY */
+
+.text-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 27px;
+
+    color: #d2a64f;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.text-btn:hover {
+    color: #f0cb76;
+
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   PREMIUM POPULAR DISHES
+========================================================= */
+
+.popular-section {
+    position: relative;
+
+    padding: 110px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #100b09,
+            #170e0c
+        );
+}
+
+
+/* GOLD DECORATIVE LINE */
+
+.popular-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 90px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d2a64f,
+            transparent
+        );
+}
+
+
+/* SECTION HEADING */
+
+.popular-section .section-heading {
+    margin-bottom: 55px;
+
+    text-align: center;
+}
+
+.popular-section .section-heading p {
+    margin-bottom: 10px;
+
+    color: #d2a64f;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.popular-section .section-heading h2 {
+    color: #f8f0e5;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 5vw, 52px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+.popular-section .section-heading span {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #8f8178;
+
+    font-size: 14px;
+}
+
+
+/* POPULAR GRID */
+
+.popular-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 23px;
+}
+
+
+/* POPULAR CARD */
+
+.popular-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #241813,
+            #130d0b
+        );
+
+    border:
+        1px solid rgba(210, 166, 79, 0.15);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.38);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.popular-card:hover {
+    transform: translateY(-9px);
+
+    border-color:
+        rgba(210, 166, 79, 0.48);
+
+    box-shadow:
+        0 28px 60px rgba(0, 0, 0, 0.52);
+}
+
+
+/* POPULAR IMAGE */
+
+.popular-image {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 235px;
+}
+
+.popular-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(0, 0, 0, 0.50)
+        );
+}
+
+.popular-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.4s ease;
+}
+
+.popular-card:hover .popular-image img {
+    transform: scale(1.08);
+
+    filter: brightness(1.05);
+}
+
+
+/* POPULAR INFO */
+
+.popular-info {
+    padding: 22px;
+}
+
+.popular-info h3 {
+    color: #f7eee2;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+.popular-info p {
+    min-height: 68px;
+
+    margin-top: 9px;
+
+    color: #95877d;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* PRICE + VIEW MENU */
+
+.popular-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 17px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.07);
+}
+
+.popular-bottom strong {
+    color: #d2a64f;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+.popular-bottom a {
+    color: #bfa477;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.popular-bottom a:hover {
+    color: #f0cb76;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   EXPLORE FULL MENU BUTTON
+========================================================= */
+
+.center-button {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.center-button .primary-btn {
+    padding: 14px 30px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .popular-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .welcome-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .welcome-image img {
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .welcome-section,
+    .popular-section {
+        padding: 75px 0;
+    }
+
+    .welcome-content h2 {
+        font-size: 37px;
+    }
+
+    .welcome-image img {
+        height: 330px;
+    }
+
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-image {
+        height: 250px;
+    }
+
+}
+/* =========================================================
+   PREMIUM NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background:
+        rgba(12, 9, 7, 0.94);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(210, 166, 79, 0.16);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.28);
+}
+
+
+/* NAV CONTAINER */
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #f5ede2;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 24px;
+
+    filter:
+        drop-shadow(
+            0 3px 8px rgba(0, 0, 0, 0.4)
+        );
+}
+
+.logo-gold {
+    color: #d2a64f;
+}
+
+
+/* =========================================================
+   NAV MENU
+========================================================= */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.nav-menu > a {
+    position: relative;
+
+    padding: 10px 14px;
+
+    color: #b8aaa0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* GOLD UNDERLINE */
+
+.nav-menu > a:not(.order-btn)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+
+    bottom: 3px;
+
+    height: 1px;
+
+    background: #d2a64f;
+
+    transform:
+        scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.nav-menu > a:not(.order-btn):hover {
+    color: #f1dfc1;
+}
+
+.nav-menu > a:not(.order-btn):hover::after,
+.nav-menu > a:not(.order-btn).active::after {
+    transform: scaleX(1);
+}
+
+
+/* ACTIVE LINK */
+
+.nav-menu > a.active {
+    color: #d2a64f;
+}
+
+
+/* =========================================================
+   ORDER NOW BUTTON
+========================================================= */
+
+.nav-menu .order-btn {
+    margin-left: 10px;
+
+    padding: 11px 20px;
+
+    border:
+        1px solid #b8872d;
+
+    border-radius: 4px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8b15d,
+            #a77724
+        );
+
+    color: #160e09;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.nav-menu .order-btn:hover {
+    color: #160e09;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.40);
+}
+
+.nav-menu .order-btn::after {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid #49372d;
+
+    border-radius: 5px;
+
+    background: #17100d;
+
+    color: #d2a64f;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.menu-toggle:hover {
+    border-color: #c99a3d;
+
+    background: #21150f;
+}
+
+
+/* =========================================================
+   NAVBAR RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 12px 20px 20px;
+
+        background:
+            rgba(15, 10, 8, 0.98);
+
+        border-bottom:
+            1px solid rgba(210, 166, 79, 0.18);
+
+        box-shadow:
+            0 20px 35px rgba(0, 0, 0, 0.50);
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu > a {
+        padding: 14px 8px;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-menu > a:not(.order-btn)::after {
+        display: none;
+    }
+
+    .nav-menu .order-btn {
+        margin: 15px 0 0;
+
+        text-align: center;
+    }
+
+}
+/* =========================================================
+   PREMIUM WHY CHOOSE US SECTION
+========================================================= */
+
+.why-section {
+    position: relative;
+
+    padding: 110px 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(210, 166, 79, 0.08),
+            transparent 38%
+        ),
+        #0d0a08 !important;
+
+    color: #f5eee3;
+}
+
+
+/* SECTION HEADING */
+
+.why-section .section-heading {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.why-section .section-heading p {
+    color: #d2a64f !important;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.why-section .section-heading h2 {
+    margin-top: 10px;
+
+    color: #f7efe2 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 5vw, 52px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+.why-section .section-heading span {
+    display: block;
+
+    margin-top: 13px;
+
+    color: #968980 !important;
+
+    font-size: 14px;
+}
+
+
+/* GOLD DECORATION */
+
+.why-section .section-heading::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 2px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d2a64f,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   WHY CARDS
+========================================================= */
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 24px;
+}
+
+.why-card {
+    position: relative;
+
+    padding: 42px 25px 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #241914,
+            #140e0b
+        ) !important;
+
+    border:
+        1px solid rgba(210, 166, 79, 0.15);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.40);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(210, 166, 79, 0.45);
+
+    box-shadow:
+        0 28px 60px rgba(0, 0, 0, 0.55);
+}
+
+
+/* TOP GOLD LINE */
+
+.why-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 45px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: #d2a64f;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.why-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto 23px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(210, 166, 79, 0.08);
+
+    border:
+        1px solid rgba(210, 166, 79, 0.25);
+
+    font-size: 29px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.why-card h3 {
+    margin-bottom: 13px;
+
+    color: #f3e9dc !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+.why-card p {
+    color: #998b82 !important;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .why-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .why-section {
+        padding: 75px 0;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        padding: 35px 25px;
+    }
+
+}
