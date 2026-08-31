@@ -4,20 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #fffaf0;
-    color: #222;
-}
+
 /* =========================
    GLOBAL
 ========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 html {
     scroll-behavior: smooth;
@@ -93,6 +83,7 @@ a {
 
 .nav-menu a {
     color: #333;
+
     font-size: 15px;
     font-weight: 600;
 
@@ -114,6 +105,7 @@ a {
 
 .order-btn {
     background: #b52b27;
+
     color: white !important;
 
     padding: 12px 22px;
@@ -125,6 +117,7 @@ a {
 
 .order-btn:hover {
     background: #8e1f1c;
+
     transform: translateY(-2px);
 }
 
@@ -141,9 +134,11 @@ a {
     display: flex;
     align-items: center;
 
-    background-image: url("../images/odisha-food.jpg");
+    background-image:
+        url("../images/odisha-food.jpg");
 
     background-size: cover;
+
     background-position: center;
 }
 
@@ -169,6 +164,7 @@ a {
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     color: white;
@@ -221,6 +217,7 @@ a {
 
 .hero-buttons {
     display: flex;
+
     gap: 15px;
 }
 
@@ -244,11 +241,13 @@ a {
 
 .primary-btn {
     background: #b52b27;
+
     color: white;
 }
 
 .primary-btn:hover {
     background: #8e1f1c;
+
     transform: translateY(-2px);
 }
 
@@ -265,54 +264,11 @@ a {
 
 .secondary-btn:hover {
     background: white;
+
     color: #222;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .nav-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav-menu {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-menu a {
-        font-size: 14px;
-    }
-
-    .hero {
-        min-height: calc(100vh - 140px);
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-}
 /* =========================
    MENU HERO
 ========================= */
@@ -321,6 +277,7 @@ a {
     min-height: 320px;
 
     display: flex;
+
     align-items: center;
 
     text-align: center;
@@ -335,6 +292,7 @@ a {
         url("../images/odisha-food.jpg");
 
     background-size: cover;
+
     background-position: center;
 }
 
@@ -384,8 +342,11 @@ a {
     margin-bottom: 50px;
 }
 
-.section-heading p {
-    color: #b52b27;
+
+/* TRADITIONAL FAVORITES */
+
+.menu-section .section-heading p {
+    color: #b52b27 !important;
 
     font-size: 14px;
 
@@ -396,16 +357,22 @@ a {
     margin-bottom: 10px;
 }
 
-.section-heading h2 {
+
+/* EXPLORE OUR MENU */
+
+.menu-section .section-heading h2 {
     font-size: 40px;
 
     margin-bottom: 12px;
 
-    color: #222;
+    color: #222222 !important;
 }
 
-.section-heading span {
-    color: #777;
+
+/* SUBTITLE */
+
+.menu-section .section-heading span {
+    color: #777777 !important;
 
     font-size: 16px;
 }
@@ -517,6 +484,65 @@ a {
     font-size: 14px;
 
     margin-bottom: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: calc(100vh - 140px);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
 }
 
 
@@ -5198,6 +5224,7 @@ body {
 
 /* SECTION HEADING */
 
+
 .why-section .section-heading {
     text-align: center;
 
@@ -5423,4 +5450,24 @@ body {
         padding: 35px 25px;
     }
 
+}
+/* =========================================
+   FORCE MENU SECTION HEADING COLORS
+========================================= */
+
+body .menu-section .container .section-heading p {
+    color: #b52b27 !important;
+    opacity: 1 !important;
+}
+
+body .menu-section .container .section-heading h2 {
+    color: #3b2a1f !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body .menu-section .container .section-heading span {
+    color: #705f52 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
